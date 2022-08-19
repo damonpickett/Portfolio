@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a93ebdb1.css",
-    "main.js": "/portfolio/static/js/main.d76d7d0c.js",
+    "main.css": "/portfolio/static/css/main.a16f5fe6.css",
+    "main.js": "/portfolio/static/js/main.46caa9b2.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/robopunks700x350.png": "/portfolio/static/media/robopunks700x350.5b1b29c4a96712d2f319.png",
+    "static/media/whitsteen-project.png": "/portfolio/static/media/whitsteen-project.92d060193f70e0daaf10.png",
     "static/media/profile.png": "/portfolio/static/media/profile.010e0148423985a3ac67.png",
     "static/media/sffpc-700x350.png": "/portfolio/static/media/sffpc-700x350.be7391c907c5bf01c932.png",
     "static/media/profile-pic (2).jpg": "/portfolio/static/media/profile-pic (2).d7a82415adc606767b49.jpg",
     "static/media/crypto-voting.png": "/portfolio/static/media/crypto-voting.f57a9b573792be3489c4.png",
     "index.html": "/portfolio/index.html",
-    "main.a93ebdb1.css.map": "/portfolio/static/css/main.a93ebdb1.css.map",
-    "main.d76d7d0c.js.map": "/portfolio/static/js/main.d76d7d0c.js.map",
+    "main.a16f5fe6.css.map": "/portfolio/static/css/main.a16f5fe6.css.map",
+    "main.46caa9b2.js.map": "/portfolio/static/js/main.46caa9b2.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a93ebdb1.css",
-    "static/js/main.d76d7d0c.js"
+    "static/css/main.a16f5fe6.css",
+    "static/js/main.46caa9b2.js"
   ]
 }
