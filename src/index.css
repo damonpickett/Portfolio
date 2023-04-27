@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
   color: white;
 }
 
@@ -20,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black;
 }
 
 code {
@@ -28,8 +28,8 @@ code {
 }
 
 .App {
-  max-width: 1000px;
   margin: 0 auto;
+  border: 1px solid pink;
 }
 
 html { font-size: 100%; } /* Remember to add to @media screens when necessary */
@@ -67,11 +67,15 @@ section h2 {
   margin: 25px auto;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 /* ------------------------------------------------------ */
 /* -- Header -- */
 
 .header {
-  border-bottom: 2px solid #0088BB;
+  background: linear-gradient(to right, #b100fd, #f012be);
   position: sticky;
   top: 0;
   z-index: 2;

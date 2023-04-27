@@ -8,7 +8,7 @@ const Hero = (props) => {
   return (
     <>
     <div id='home'></div>
-    <section className="hero" data-aos='fade-in'>
+    <section className="hero" data-aos='fade-right'>
       
       <Link to="/">
         <img src={profile} alt="Damon Pickett" />
