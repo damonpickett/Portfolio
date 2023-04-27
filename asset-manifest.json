@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.6ff43f63.css",
-    "main.js": "/portfolio/static/js/main.37e22ef8.js",
+    "main.css": "/portfolio/static/css/main.c5949add.css",
+    "main.js": "/portfolio/static/js/main.d28d6cd3.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/robopunks700x350.png": "/portfolio/static/media/robopunks700x350.5b1b29c4a96712d2f319.png",
     "static/media/whitsteen-project.png": "/portfolio/static/media/whitsteen-project.92d060193f70e0daaf10.png",
-    "static/media/profile.png": "/portfolio/static/media/profile.010e0148423985a3ac67.png",
     "static/media/sffpc-700x350.png": "/portfolio/static/media/sffpc-700x350.be7391c907c5bf01c932.png",
+    "static/media/buge700x350.jpg": "/portfolio/static/media/buge700x350.4e8c4cccaa8ef652513f.jpg",
+    "static/media/stussis700x350.jpg": "/portfolio/static/media/stussis700x350.a53e2041b3c99bad6ae4.jpg",
     "static/media/profile-pic (2).jpg": "/portfolio/static/media/profile-pic (2).d7a82415adc606767b49.jpg",
-    "static/media/crypto-voting.png": "/portfolio/static/media/crypto-voting.f57a9b573792be3489c4.png",
+    "static/media/seaweasel700x350.jpg": "/portfolio/static/media/seaweasel700x350.dc6f6d4c58c6dddeaa15.jpg",
+    "static/media/macta700x350.jpg": "/portfolio/static/media/macta700x350.09138fa3cbc8945be8d9.jpg",
+    "static/media/torbombdesign700x350.jpg": "/portfolio/static/media/torbombdesign700x350.6e3ca6366dca9dca166e.jpg",
     "index.html": "/portfolio/index.html",
-    "main.6ff43f63.css.map": "/portfolio/static/css/main.6ff43f63.css.map",
-    "main.37e22ef8.js.map": "/portfolio/static/js/main.37e22ef8.js.map",
+    "main.c5949add.css.map": "/portfolio/static/css/main.c5949add.css.map",
+    "main.d28d6cd3.js.map": "/portfolio/static/js/main.d28d6cd3.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ff43f63.css",
-    "static/js/main.37e22ef8.js"
+    "static/css/main.c5949add.css",
+    "static/js/main.d28d6cd3.js"
   ]
 }
