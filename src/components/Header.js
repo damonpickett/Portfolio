@@ -1,25 +1,22 @@
-// Import Assets
-import profile from "../assets/profile-pic (2).jpg";
-import { Link } from 'react-router-dom';
-
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Header = (props) => {
-
   return (
-    <section className="header">
-      <Link to="/">
-        <img src={profile} alt="Damon Pickett" />
-      </Link>
+    <section className='header'>
+      
+        <ul className='header-nav'>
+            <li><Link smooth to='/#home'>Home</Link></li>
+            <li><Link smooth to='/#projects'>Projects</Link></li>
+            <li><Link smooth to='/#experience'>Experience</Link></li>
+            <li><Link smooth to='/#contact' onClick={() => props.setShow(true)}>Contact</Link></li>
+        </ul>
 
-      <div className="header__content">
-        <h1>
-          Hi, I'm <span className="camelCase">damonPickett</span>
-        </h1>
-        <h2>Front-end | Blockchain Developer</h2>
+        {/* For tablets and mobile */}
+
+        <div className={props.menuOpen ? 'menu-btn open' : 'menu-btn'} onClick={() => props.setMenuOpen(!props.menuOpen)}>
+          <div className='menu-btn__burger'></div>
+        </div>
         
-          <button onClick={() => props.setShow(true)} className="button">Get In Touch</button>
-        
-      </div>
     </section>
   );
 };

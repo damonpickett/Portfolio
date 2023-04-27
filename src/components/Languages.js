@@ -1,6 +1,7 @@
 const Languages = () => {
     return (
-      <section className="languages">
+      <section className="languages" data-aos='fade-in'>
+        <div id='projects'></div>
         <h2>Languages</h2>
   
         <ul className="language-list">

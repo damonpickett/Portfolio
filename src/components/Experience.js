@@ -1,9 +1,17 @@
 const Experience = () => {
     return (
-        <div className="experience">
+        <section className="experience" data-aos='fade-in'>
             <h2>Experience</h2>
 
             <ul>
+                <li>
+                    <i>Solidus Development</i> - <strong>Owner/Operator</strong>, 2022
+                    <ul className="inner-list">
+                        <li>Web design and development for individuals and small businesses</li>
+                        <li>SEO and copywriting services also provided</li>
+                        <li>Five completed projects to date with more on the way</li>
+                    </ul>
+                </li>
                 <li>
                     <i>Sovereign Prime</i> - <strong>Intern</strong>, 2022
                     <ul className="inner-list">
@@ -43,7 +51,7 @@ const Experience = () => {
                     </ul>
                 </li>
             </ul>
-        </div>
+        </section>
     );
 }
 

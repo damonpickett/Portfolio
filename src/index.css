@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(45, 43, 43);
+  background-color: black;
   color: white;
 }
 
@@ -28,9 +28,15 @@ code {
 }
 
 .App {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
+
+html { font-size: 100%; } /* Remember to add to @media screens when necessary */
+h1 { font-size: 2.074em; }
+h2 { font-size: 1.728em; }
+h3 { font-size: 1.44em; }
+h4 { font-size: 1.2em; }
 
 h1, h2, h3, h4 {
   font-family: 'Orbitron', sans-serif;
@@ -42,77 +48,134 @@ p, li {
 }
 
 .header,
+.hero,
 .about,
 .languages,
 .projects,
 .experience,
 .social,
 .footer {
-  padding: 50px 25px 25px 25px;
+  padding: 25px;
 }
 
-/* ------------------------------------------------------ */
-/* -- Navigation -- */
-
-.nav {
-  background-color: #12BDF3;
-  padding: 30px 100px;
-  font-size: 1.5em;
-  position: sticky;
-  top: 0;
+section {
+  text-align: center;
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  background-color: inherit;
-}
-
-.nav-list li{
-  background-color: inherit;
+section h2 {
+  font-size: 42px;
+  margin: 25px auto;
 }
 
 /* ------------------------------------------------------ */
 /* -- Header -- */
 
 .header {
+  border-bottom: 2px solid #0088BB;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header-nav {
+  list-style: none;
+}
+
+.header-nav li{
+  display: inline;
+}
+
+.header-nav li a{
+  text-decoration: none;
+  margin-right: 1em;
+  font-size: 2em;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* ------------------------------------------------------ */
+/* -- Burger Menu -- */
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(34, 33, 33, 0.8);
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  transition: left 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.burger-menu.show {
+  left: 0;
+}
+
+.burger-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.burger-menu li {
+  margin: 10px 0 30px;
+}
+
+.burger-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+
+
+/* ------------------------------------------------------ */
+/* -- Hero -- */
+
+.hero {
   max-width: 1200px;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  gap: 20px;
 }
 
-.header img {
+.hero img {
   max-width: 300px;
   height: auto;
-
   margin: 20px 0;
-
   border-radius: 50%;
-
   border:#12BDF3 2px solid;
 }
 
-.header__content {
+.hero__content {
   width: 400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
-.header__content h1 {
+.hero__content h1 {
   font-size: 48px;
 }
 
-.header__content h2 {
+.hero__content h2 {
   font-family: 'Orbitron', sans-serif;
+  font-size: 2.1em;
 }
 
-.header__content p {
+.hero__content p {
   font-size: 32px;
 }
 
-.header__content button {
+.hero__content button {
   margin: 25px auto 0;
 }
 
@@ -129,16 +192,17 @@ p, li {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 .modal-content {
   width: 500px;
-  background-color: white;
-  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  border: 2px solid #0088BB;
 }
 
 .modal-header, .modal-footer {
@@ -198,17 +262,11 @@ p, li {
 /* ------------------------------------------------------ */
 /* -- About -- */
 
-
-.about h2 {
-  font-size: 42px;
-  margin: 25px auto;
-}
-
 .about p {
   font-size: 1.8em;
   line-height: 130%;
   max-width: 75ch;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .about a {
@@ -217,11 +275,6 @@ p, li {
 
 /* ------------------------------------------------------ */
 /* -- Languages/Skills -- */
-
-.languages h2 {
-  font-size: 42px;
-  margin: 25px auto;
-}
 
 .languages p {
   font-size: 18px;
@@ -235,7 +288,7 @@ p, li {
   list-style-type: none;
   font-size: 75px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -249,125 +302,98 @@ p, li {
 /* ------------------------------------------------------ */
 /* -- Projects -- */
 
-
-.projects h2 {
-  font-size: 42px;
-  margin: 25px auto;
-}
-
-.small1 {
-  font-size: 0.9em;
-  color:#12BDF3
-}
-
-.small2 {
-  font-size: 0.76em;
-  color:#12BDF3
-}
-
-.projects p {
-  font-size: 18px;
-  line-height: 130%;
-  max-width: 50ch;
-}
-
 .projects__cards {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .projects__card {
   max-width: 350px;
-
-  padding: 20px;
-
-  border: 1px solid #0088BB;
+  padding: 0 20px;
+  border: 2px solid #0088BB;
   border-radius: 8px;
   height: 500px;
+  transition: all 0.5s ease;
+}
+
+.projects__card:hover {
+  transform: scale(1.1); 
+  border: 2px solid #a5e1f7;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid pink; */
+  padding: 10px 0;
 }
 
 .projects__card h3 {
-  font-size: 32px;
+  font-size: 2em;
   font-weight: 300;
   margin-bottom: 10px;
 }
 
-.projects__card p {
-  font-size: 16px;
-  margin: 20px 0;
-}
+/* .card-img {
+  border: 1px solid pink;
+} */
 
 .projects__card img {
   width: 100%;
   height: auto;
-  margin: 20px 0 10px;
-
+  margin: 0 0 10px;
   border-radius: 8px;
   border:#12BDF3 1px solid;
 }
+
+.card-text {
+  height: 170px;
+}
+
+.card-text p {
+  margin: 0 0 10px;
+  font-size: 1.6em;
+  line-height: 130%;
+}
+
+/* .card-buttons{
+  border: 1px solid pink;
+} */
 
 .projects__card .button {
   margin: 10px 5px 0;
   font-size: 1em;
 }
 
-.card-title {
-  height: 10%;
-}
-
-.card-title h3{
-  font-size: 1.7em;
-}
-
-.card-img {
-  height: 35%;
-}
-
-.card-text {
-  height: 35%;
-  padding-top: 15px;
-}
-
-.card-text p {
-  font-size: 1.1em;
-}
-
-.card-buttons{
-  height: 20%;
-}
-
 /* ------------------------------------------------------ */
 /* -- Education/Experience -- */
 
-.experience h2 {
-  font-size: 42px;
-  margin: 25px auto;
-}
+
 
 .experience ul {
   margin: 0 0 10px 50px;
+  text-align: left;
 }
 
 .experience li {
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 130%;
   margin: 15px auto;
+}
+
+.experience i {
+  font-size: 1.5em;
 }
 
 /* ------------------------------------------------------ */
 /* -- Social Media -- */
 
-.social h2 {
-  font-size: 42px;
-  margin: 25px auto;
-}
-
 .social-links {
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 
 .social-links a {
@@ -418,7 +444,7 @@ p, li {
 
 @media screen and (max-width: 300px) {
 
-  .header {
+  .hero {
     justify-content: center;
   }
 }
@@ -432,15 +458,15 @@ p, li {
     text-align: center;
   }
 
-  .header {
+  .hero {
     justify-content: center;
   }
 
-  .header__content h1 {
+  .hero__content h1 {
     font-size: 1.7em;
   }
 
-  .header__content p {
+  .hero__content p {
     font-size: 1.7em;
   }
 
@@ -465,10 +491,6 @@ p, li {
 
   .card-title h3 {
     font-size: 1.7em;
-  }
-
-  .card-text {
-    margin-bottom: 15px;
   }
 
   .card-buttons {
@@ -506,6 +528,67 @@ p, li {
 @media screen and (max-width: 550px) {
 
   .header {
+    display: flex;
+    justify-content: right;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    text-align: left;
+  }
+
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: white;
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: white;
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+
+  .hero {
     justify-content: center;
   }
 }
