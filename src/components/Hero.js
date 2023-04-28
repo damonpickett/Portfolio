@@ -1,6 +1,6 @@
 // Import Assets
-import profile from "../assets/profile-pic (2).jpg";
-import { Link } from 'react-router-dom';
+import humanProfile from "../assets/profile-pic (2).jpg";
+import cyberProfile from '../assets/cyber-profile-pic.jpeg';
 
 
 const Hero = (props) => {
@@ -9,20 +9,24 @@ const Hero = (props) => {
     <>
     <div id='home'></div>
     <section className="hero" data-aos='fade-right'>
-      
-      <Link to="/">
-        <img src={profile} alt="Damon Pickett" />
-      </Link>
 
-      <div className="hero__content">
+      <div className='hero__content'>
+      <div className="hero__text">
         <h1>
           Hi, I'm <span className="camelCase">damonPickett</span>
         </h1>
         <h2>Software Developer</h2>
-        
           <button onClick={() => props.setShow(true)} className="button">Get In Touch</button>
-        
       </div>
+
+      <div className='image__content'>
+        <div className='image-container'>
+          <img src={cyberProfile} alt="Damon Pickett" />
+          <img src={humanProfile} alt="Damon Pickett" />
+        </div>
+      </div>
+      </div>
+
     </section>
     </>
   );

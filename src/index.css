@@ -27,11 +27,6 @@ code {
     monospace;
 }
 
-.App {
-  margin: 0 auto;
-  border: 1px solid pink;
-}
-
 html { font-size: 100%; } /* Remember to add to @media screens when necessary */
 h1 { font-size: 2.074em; }
 h2 { font-size: 1.728em; }
@@ -60,6 +55,8 @@ p, li {
 
 section {
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 section h2 {
@@ -79,6 +76,7 @@ section h2 {
   position: sticky;
   top: 0;
   z-index: 2;
+  text-align: center;
 }
 
 .header-nav {
@@ -151,6 +149,17 @@ section h2 {
   flex-wrap: wrap;
   text-align: center;
   gap: 20px;
+  height: 500px;
+  padding-top: 0;
+}
+
+.hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  /* border: 1px solid pink; */
 }
 
 .hero img {
@@ -161,30 +170,60 @@ section h2 {
   border:#12BDF3 2px solid;
 }
 
-.hero__content {
-  width: 400px;
-  /* margin: 0 auto; */
+.hero__text {
+  flex: 1;
 }
 
-.hero__content h1 {
+.hero__text h1 {
   font-size: 48px;
+  margin-bottom: 0;
 }
 
-.hero__content h2 {
+.hero__text h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.1em;
+  color: #f012be;
+  margin: 0;
 }
 
-.hero__content p {
+.hero__text p {
   font-size: 32px;
 }
 
-.hero__content button {
+.hero__text button {
   margin: 25px auto 0;
 }
 
 .camelCase {
   font-family: 'Source Code Pro', monospace;
+}
+
+.image__content {
+  flex: 1;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  position: absolute;
+  top: -150px;
+  left: 60px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.image-container img:last-of-type {
+  opacity: 0;
+}
+
+.image-container:hover img:first-of-type {
+  opacity: 0;
+}
+
+.image-container:hover img:last-of-type {
+  opacity: 1;
 }
 
 /* ------------------------------------------------------ */
@@ -466,11 +505,11 @@ section h2 {
     justify-content: center;
   }
 
-  .hero__content h1 {
+  .hero__text h1 {
     font-size: 1.7em;
   }
 
-  .hero__content p {
+  .hero__text p {
     font-size: 1.7em;
   }
 

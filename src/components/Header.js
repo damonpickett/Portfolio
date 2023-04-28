@@ -2,7 +2,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Header = (props) => {
   return (
-    <section className='header'>
+    <div className='header'>
       
         <ul className='header-nav'>
             <li><Link smooth to='/#home'>Home</Link></li>
@@ -17,7 +17,7 @@ const Header = (props) => {
           <div className='menu-btn__burger'></div>
         </div>
         
-    </section>
+    </div>
   );
 };
 
