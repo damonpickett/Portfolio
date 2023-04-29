@@ -57,6 +57,7 @@ section {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
+  border: 1px solid pink;
 }
 
 section h2 {
@@ -157,21 +158,14 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin: 0;
-  /* border: 1px solid pink; */
-}
-
-.hero img {
-  max-width: 300px;
-  height: auto;
-  margin: 20px 0;
-  border-radius: 50%;
-  border:#12BDF3 2px solid;
+  border: 1px solid pink;
 }
 
 .hero__text {
   flex: 1;
+  border: 1px solid pink;
 }
 
 .hero__text h1 {
@@ -200,6 +194,7 @@ section h2 {
 
 .image__content {
   flex: 1;
+  border: 1px solid pink;
 }
 
 .image-container {
@@ -208,10 +203,16 @@ section h2 {
 
 .image-container img {
   position: absolute;
-  top: -150px;
-  left: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
-  transition: opacity 0.3s ease-in-out; 
+  transition: opacity 0.3s ease-in-out;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 50%;
+  border:#12BDF3 2px solid;
 }
 
 .image-container img:last-of-type {
@@ -490,6 +491,7 @@ section h2 {
   .hero {
     justify-content: center;
   }
+
 }
 
 /* ------------------------------------------------------ */
@@ -511,6 +513,14 @@ section h2 {
 
   .hero__text p {
     font-size: 1.7em;
+  }
+
+  .hero__text {
+    order: 1;
+  }
+
+  .image__content {
+    order: 0;
   }
 
   .modal-content {
@@ -644,4 +654,34 @@ section h2 {
   .projects__cards {
     gap: 10px;
   }
+
+  .hero__content {
+    
+  }
+
+  .hero__text {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    position: static;
+    transform: none;
+  }
+
+  .real-me {
+    display: none;
+  }
+
+  .hero__content {
+    flex-direction: column;
+  }
+  
+  .hero__text {
+    order: 2;
+  }
+  
+  .image__content {
+    order: 1;
+  }
+
 }
